@@ -1,5 +1,7 @@
 #!groovy
-@Libary("testpush") _
+
+@Library('testpush') _
+
 def tools = new org.devops.tools()
 
 pipeline{
@@ -9,11 +11,11 @@ agent{
     }
   }
   stages{
-    stage{
+    stage('test'){
       steps{
         script{
           println(666)
-          tools.PrinMsg("this")
+          tools.PrintMsg("this")
         }
       }
     }
