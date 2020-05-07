@@ -1,11 +1,21 @@
 #!groovy
 @Library('jenkinslibary') -
 def build = new org.devops.build()
+  
+String srcUrl = "${env.srcUrl}"
+String branchName = "${env.branchName}"
+String buildShell = "${env.buildShell}"
 pipeline{
   agent{
     node {label "master"}
   }
   stages{
+    stage("CheckOut"){
+      steps{
+        script{
+        }
+      }
+    }
     stage("build"){
       steps{
         script{
