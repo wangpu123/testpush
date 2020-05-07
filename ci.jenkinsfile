@@ -1,5 +1,5 @@
 #!groovy
-@Library('jenkinslibary') -
+@Library('jenkinslibary') _
 def build = new org.devops.build()
   
 String srcUrl = "${env.srcUrl}"
