@@ -1,0 +1,17 @@
+#!groovy
+@Library('jenkinslibary') -
+def build = new org.devops.build()
+pipeline{
+  agent{
+    node {label "master"}
+  }
+  stages{
+    stage("build"){
+      steps{
+        script{
+          build.Build(buildType,buildShell)
+        }
+      }
+    }
+  }
+}
