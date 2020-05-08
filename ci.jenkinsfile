@@ -22,6 +22,7 @@ pipeline{
       steps{
         script{
           build.Build(buildType,buildShell)
+          echo "${env.token}"
         }
       }
     }
